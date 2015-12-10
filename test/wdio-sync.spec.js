@@ -66,6 +66,10 @@ describe('wdio-sync', () => {
             WDIOSyncRewire.__Rewire__('Fiber', FiberMock)
         })
 
+        after(() => {
+            WDIOSyncRewire.__ResetDependency__('Fiber')
+        })
+
         it('should be registered globally', () => {
             (!!wdioSync).should.be.true()
         })
