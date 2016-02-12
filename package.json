@@ -1,11 +1,11 @@
 {
   "name": "@georgecrawfordft/wdio-sync",
-  "version": "0.4.6-4",
+  "version": "0.4.7",
   "description": "A WebdriverIO plugin. Helper module to run WebdriverIO commands synchronously.",
   "main": "build/index.js",
   "scripts": {
-    "test": "grunt",
-    "build": "grunt build",
+    "build": "grunt",
+    "test": "grunt mocha_istanbul",
     "prepublish": "npm prune && npm run build"
   },
   "repository": {
@@ -27,7 +27,7 @@
   "homepage": "https://github.com/webdriverio/wdio-sync#readme",
   "dependencies": {
     "babel": "^5.8.23",
-    "fibers-scriby": "^1.0.8",
+    "fibers": "^1.0.9",
     "object.assign": "^4.0.3"
   },
   "devDependencies": {
